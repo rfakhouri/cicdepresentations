@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="plugin/accessibility/helper.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,22 +25,160 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-template>
-					# Infrastructure as Code
-					## Using Terraform to Automate the Cloud
+
+				<section data-markdown>
+					<text-area data-template>
+						# Infrastructure as Code
+						## Using Terraform to Automate the Cloud
+					</text-area>
 				</section>
-				<section data-template>
-					# What is Terraform?
+
+				<section>
+					<section data-markdown>
+						<text-area data-template>
+						# What is Terraform?
+						</text-area>
+					</section>
+					<section data-markdown>
+						<text-area data-template>
+						It is an open source tool that codifies APIs into declarative configuration files that can be shared amongst team members, treated as code, edited, reviewed, and versioned.
+						</text-area>
+					</section>
 				</section>
-				<section data-template>
+
+				<section>
+
+					<section data-markdown>
+						<text-area data-template>
+							# HashiCorp Configuration Language (HCL)
+						</text-area>
+					</section>
+
+					<section data-markdown>
+						<text-area data-template>
+							# What is that?
+						</text-area>
+					</section>
+					<section data-markdown>
+						<text-area data-template>
+							It's a declarative configuration language created by HashiCorp*  
+							_The company that created Terraform_
+						</text-area>
+					</section>
+
+					<section data-markdown>
+						<text-area data-template>
+							# What does that mean?
+						</text-area>
+					</section>
+				
+					<section data-markdown>
+						<text-area data-template>
+						You define the *state* of your infrastructure and Terrafrom figures out what commands you need to run and in what order to create that state	
+						This is different from how you are used to writing code where you tell the computer how to give you the state you want.
+						</text-area>
+					</section>
+
+					<section data-markdown>
+						<text-area data-template>
+							# It looks like this:
+							
+							```
+							resource "azurerm_resource_group" "rg" {
+									name     = "resource-group-name"
+									location = "CanadaEast"
+									tags {
+											environment = "TF sandbox"
+									}
+							}
+							```
+						</text-area>
+					</section>
+
+				</section>
+
+				<section data-markdown>
+					<text-area data-template>
 					# Terraform vs...
 					- Cloud Formation
 					- Azure Templates
 					- Shell Scripting
+					</text-area>
 				</section>
-				<section data-template>
-					# What is a Declarative Programming Language
+			
+				<section>
+					<section data-markdown>
+						<text-area data-template>
+						# First Steps
+						</text-area>
+					</section>
+					<section data-markdown>
+						<text-area data-template>
+						```
+						terraform init
+						```
+						- Download and install Providers
+						- Download Modules
+						</text-area>
+					</section>
+
+
 				</section>
+
+				<section data-markdown>
+					<text-area data-template>
+						```
+					# Apply vs Plan
+					</text-area>
+				</section>
+
+				<section data-markdown>
+					<text-area data-template>
+					# Common Pitfalls
+					</text-area>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<text-area data-template>
+						# Input Variables
+						- CLI 
+						- File
+						- Environment
+						</text-area>
+					<<section data-markdown>
+						<text-area data-template>
+						</text-area>
+					</section>
+
+				</section>
+
+				<section data-markdown>
+					<text-area data-template>
+					# Data Sources
+					</text-area>
+				</section>
+
+				<section data-markdown>
+					<text-area data-template>
+					# Outputs
+					</text-area>
+				</section>
+
+				<section data-markdown>
+					<text-area data-template>
+					# Dependencies
+					</text-area>
+				</section>
+
+				<section data-markdown>
+					<text-area data-template>
+					# Modules
+					</text-area>
+				</section>
+
+
+
 			</div>
 		</div>
 
@@ -55,7 +194,8 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/accessibility/helper.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 		</script>
