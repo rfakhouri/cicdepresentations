@@ -24,8 +24,99 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<section>Deployment</section>
+					<section>Pretty much just copying some files to a server.</section>
+					<section>Thank You have a nice day.</section>
+				</section>
+				<section>
+					<section>Recreate</section>
+					<section>Probably what 99% of you are doing right now.</section>
+					<section>
+						Pros:
+						Easy to setup.
+						Application state entirely renewed.
+						Cons:
+						High impact on the user, expect downtime that depends on both shutdown and boot duration of the application.
+					</section>
+				</section>
+				<section>
+					<section>Blue/Green</section>
+					<section>Pros:
+
+Instant rollout/rollback.
+Avoid versioning issue, the entire application state is changed in one go.
+Cons:
+
+Expensive as it requires double the resources.
+Proper test of the entire platform should be done before releasing to production.
+Handling stateful applications can be hard.</section>
+				</section>
+				<section>
+					<section>Canary</section>
+					<section>
+					Pros:
+
+Version released for a subset of users.
+Convenient for error rate and performance monitoring.
+Fast rollback.
+Con:
+
+Slow rollout.
+
+					</section>
+				</section>
+				<section>
+					<section>Ramped</section>
+					<section>
+						Pros:
+
+Easy to set up.
+Version is slowly released across instances.
+Convenient for stateful applications that can handle rebalancing of the data.
+
+Cons:
+Rollout/rollback can take time.
+Supporting multiple APIs is hard.
+No control over traffic.
+					</section>
+				</section>
+				<section>
+					<section>Shadow</section>
+					<section>
+						Pros:
+
+Performance testing of the application with production traffic.
+No impact on the user.
+No rollout until the stability and performance of the application meet the requirements.
+Cons:
+
+Expensive as it requires double the resources.
+Not a true user test and can be misleading.
+Complex to setup.
+Requires mocking service for certain cases.
+					</section>
+				</section>
+				<section>
+					<section>Special Mention</section>
+					<section>A/B Testing</section>
+					<section>
+						Pros:
+
+						Several versions run in parallel.
+						Full control over the traffic distribution.
+						Cons:
+
+						Requires intelligent load balancer.
+						Hard to troubleshoot errors for a given session, distributed tracing becomes mandatory.
+					</section>
+				</section>
+				<section>
+					<section>
+						References
+						https://thenewstack.io/deployment-strategies/
+					</section>
+				</section>
 			</div>
 		</div>
 
