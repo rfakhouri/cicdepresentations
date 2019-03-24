@@ -24,9 +24,84 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+				<section>Managing Secrets</section>
+
+				<section>Don't check them into your code</section>
+
+				<section>
+					<section>Things you shouldn't check in.</section>
+					<section data-markdown>
+						<textarea data-template>
+							Passwords
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							API Keys
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							Connection Strings
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							Your deep dark secrets
+							```
+							/*
+							 * Dear Diary
+							 * Today I cried watching Dirty Dancing. 
+							 * I'm crazy for swayze
+							 */
+							```
+						</textarea>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						If you do check in secrets people will find out. <br/>
+						There are tools that make this trivial to do.
+					</section>
+					<section>
+						For instance...
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							**Gitrob: Putting the Open Source in OSINT**  
+							_Gitrob is a tool to help find potentially sensitive files pushed to public repositories on Github._
+						https://github.com/michenriksen/gitrob
+						</textarea>
+					</section>
+
+				</section>
+				<section>
+					<section>Luckily there are tools that you can integrate into your build piepline to prevent this.</section>
+					<section>https://github.com/Yelp/detect-secrets</section>
+					<section>https://github.com/auth0/repo-supervisor</section>
+					<section>https://github.com/awslabs/git-secrets</section>
+				</section>
+				<section>
+					<section>And hey accidents happen, we are all human.</section>
+					<section>So come up with a plan for when it does happen.</section>
+					<section data-markdown>
+						<textarea data-template>
+						Here's a sample procedure.  
+						1. Remove Secret from repo  
+						0. Revoke secret  
+							- Generate New Password  
+							- Revoke API Keys  
+						0. Evaluate Potential Impact look to your Privacy Impact Assessment (PIA) to help.  
+						0. Notify your Privacy Office or whoever you contact when a Privacy Breach occurs
+						</textarea>
+					</section>
+
+				</section>
+							</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
