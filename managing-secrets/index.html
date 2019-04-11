@@ -81,16 +81,19 @@
 				</section>
 				<section>
 					<section>Luckily there are tools that you can integrate into your build piepline to prevent this.</section>
+					<section>Typically they scan for strings with high entropy values</section>
 					<section>https://github.com/Yelp/detect-secrets</section>
 					<section>https://github.com/auth0/repo-supervisor</section>
 					<section>https://github.com/awslabs/git-secrets</section>
+					<section>https://github.com/dxa4481/truffleHog</section>
+					<section>https://github.com/anshumanbh/git-all-secrets</section>
 				</section>
 				<section>
 					<section>And hey accidents happen, we are all human.</section>
 					<section>So come up with a plan for when it does happen.</section>
+					<section> Here's a sample procedure.  </section>
 					<section data-markdown>
 						<textarea data-template>
-						Here's a sample procedure.  
 						1. Remove Secret from repo  
 						0. Revoke secret  
 							- Generate New Password  
@@ -101,6 +104,31 @@
 					</section>
 
 				</section>
+				<section>You should also hold a <strong>Blameless Post-Mortem</strong> to determine how the secret got commited and come up with a way to ensure it doesn't happen again.</section>
+					<section>
+						<section> Strategies for Blameless Post Mortems</section>
+						<section data-markdown>
+							<textarea data-template>
+							5 Whys  
+							Keep asking why until you find the root cause of the problem  
+							
+							</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+								- what actions they took at what time,
+								- what effects they observed,
+								- expectations they had,
+								- assumptions they had made,
+								- and their understanding of timeline of events as they occurred.
+							</textarea>
+						</section>
+					</section>
+					<section>
+						References
+						https://codeascraft.com/2012/05/22/blameless-postmortems/
+						https://en.wikipedia.org/wiki/5_Whys
+					</section>
 							</div>
 		</div>
 
