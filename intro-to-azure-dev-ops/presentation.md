@@ -1,5 +1,5 @@
 # Introduction to Azure DevOps*
-##* Pipelines only
+## * Pipelines only
 
 ---
 
