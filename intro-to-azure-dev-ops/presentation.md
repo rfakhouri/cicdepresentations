@@ -141,6 +141,12 @@ Variables
 
 Hardcoded values can be added directly, or variable groups can be referenced. Variables may be specified at the pipeline, stage, or job level.
 
+------
+
+Secret Variables
+
+These should never be added to your azure-pipelines.yml file and should be either pulled in from a secret management tool at build time or entered into the web portal.
+
 ---
 
 Templates
@@ -162,7 +168,7 @@ Resources
 
 ------
 
-Container resource
+Container resource  
 Container jobs let you isolate your tools and dependencies inside a container. The agent will launch an instance of your specified container, then run steps inside it. The container resource lets you specify your container images.
 
 Service containers run alongside a job to provide various dependencies such as databases.
@@ -170,12 +176,12 @@ Service containers run alongside a job to provide various dependencies such as d
 ------
 
 
-Repository resource
+Repository resource  
 If your pipeline has templates in another repository, you must let the system know about that repository. The repository resource lets you specify an external repository.
 
 ------
 
-Type
+Type  
 Pipelines support two types of repositories, git and github. git refers to Azure Repos Git repos. If you choose git as your type, then name refers to another repository in the same project. For example, otherRepo. To refer to a repo in another project within the same organization, prefix the name with that project's name. For example, OtherProject/otherRepo.
 
 If you choose github as your type, then name is the full name of the GitHub repo including the user or organization. For example, Microsoft/vscode. Also, GitHub repos require a service connection for authorization.
@@ -184,9 +190,8 @@ If you choose github as your type, then name is the full name of the GitHub repo
 
 Triggers
 
-Push Trigger 
+Push Trigger   
 PR Trigger
-
 
 ---
 
@@ -204,3 +209,7 @@ Pre-defined actions created by Microsoft
 
 Note: Realistically how often are you going to migrate to another CSP?
 
+---
+
+References
+- https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops
