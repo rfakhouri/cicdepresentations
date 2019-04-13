@@ -1,152 +1,53 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>Introduction to Pipelines in Azure DevOps</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Managing Secrets</section>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
 
-				<section>Don't check them into your code</section>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
 
-				<section>
-					<section>Things you shouldn't check in.</section>
-					<section data-markdown>
-						<textarea data-template>
-							Passwords
-						</textarea>
-					</section>
-
-					<section data-markdown>
-						<textarea data-template>
-							API Keys
-						</textarea>
-					</section>
-
-					<section data-markdown>
-						<textarea data-template>
-							Connection Strings
-						</textarea>
-					</section>
-
-					<section data-markdown>
-						<textarea data-template>
-							Your deep dark secrets
-							```
-							/*
-							 * Dear Diary
-							 * Today I cried watching Dirty Dancing. 
-							 * I'm crazy for swayze
-							 */
-							```
-						</textarea>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						If you do check in secrets people will find out. <br/>
-						There are tools that make this trivial to do.
-					</section>
-					<section>
-						For instance...
-					</section>
-					<section data-markdown>
-						<textarea data-template>
-							**Gitrob: Putting the Open Source in OSINT**  
-							_Gitrob is a tool to help find potentially sensitive files pushed to public repositories on Github._
-						https://github.com/michenriksen/gitrob
-						</textarea>
-					</section>
-
-				</section>
-				<section>
-					<section>Luckily there are tools that you can integrate into your build piepline to prevent this.</section>
-					<section>Typically they scan for strings with high entropy values</section>
-					<section>https://github.com/Yelp/detect-secrets</section>
-					<section>https://github.com/auth0/repo-supervisor</section>
-					<section>https://github.com/awslabs/git-secrets</section>
-					<section>https://github.com/dxa4481/truffleHog</section>
-					<section>https://github.com/anshumanbh/git-all-secrets</section>
-				</section>
-				<section>
-					<section>And hey accidents happen, we are all human.</section>
-					<section>So come up with a plan for when it does happen.</section>
-					<section> Here's a sample procedure.  </section>
-					<section data-markdown>
-						<textarea data-template>
-						1. Remove Secret from repo  
-						0. Revoke secret  
-							- Generate New Password  
-							- Revoke API Keys  
-						0. Evaluate Potential Impact look to your Privacy Impact Assessment (PIA) to help.  
-						0. Notify your Privacy Office or whoever you contact when a Privacy Breach occurs
-						</textarea>
-					</section>
-
-				</section>
-				<section>You should also hold a <strong>Blameless Post-Mortem</strong> to determine how the secret got commited and come up with a way to ensure it doesn't happen again.</section>
-					<section>
-						<section> Strategies for Blameless Post Mortems</section>
-						<section data-markdown>
-							<textarea data-template>
-							5 Whys  
-							Keep asking why until you find the root cause of the problem  
-							
-							</textarea>
-						</section>
-						<section data-markdown>
-							<textarea data-template>
-								- what actions they took at what time,
-								- what effects they observed,
-								- expectations they had,
-								- assumptions they had made,
-								- and their understanding of timeline of events as they occurred.
-							</textarea>
-						</section>
-					</section>
-					<section>
-						References
-						https://codeascraft.com/2012/05/22/blameless-postmortems/
-						https://en.wikipedia.org/wiki/5_Whys
-					</section>
-							</div>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown="presentation.md" data-separator="^\n---\n$" data-separator-vertical="^\n------\n$"
+				data-separator-notes="^Note:" data-charset="iso-8859-15">Slide 1
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
 </html>
