@@ -9,8 +9,20 @@ Use this lab time to create two types of test for the Demo Application
 
 ## Part 1 End to End test using Cypress
 
+*N.B.  Use the following commands to setup your environment for writing cypress tests:*
+
+```bash
+docker-compose up -d express-api
+vue-client/npm run test:e2e
+```
+*This will start up the back end server in detached mode and will start the cypress tests*
+
+---
+
+
 1. Add the Cypress-Axe Dev dependency to the project  
-   Use the instructions found here: https://www.npmjs.com/package/cypress-axe
+   Use the instructions found here: https://www.npmjs.com/package/cypress-axe  
+  *You will have to restart your cypress instance after this step*
 2. Write a test that adds a task and validates that it gets added
 3. Write a test that toggles the task you added in the previous step and validates that it gets toggled.
 4. Add the following to the `scripts` section of the `vue-client/package.json` file.  
