@@ -15,7 +15,8 @@ Instructions can be found here: https://docs.docker.com/engine/reference/command
 0. Move the steps you just created into a job. 
     - https://docs.microsoft.com/en-us/azure/devops/pipelines/process/phases?view=azure-devops&tabs=yaml  
   *You can copy the following template*
-```yaml
+
+```yml
 
 trigger:
 - master
