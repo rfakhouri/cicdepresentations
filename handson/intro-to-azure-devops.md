@@ -12,4 +12,25 @@
 Instructions can be found here: https://docs.docker.com/engine/reference/commandline/save/
 0. Publish the tar file you just created to the pipeline using the **artifactName** `images`, and the **targetPath** `./publish`
    Instructions can be found here: https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/publish-pipeline-artifact?view=azure-devops
-0. 
+0. Move the steps you just created into a job. 
+    - https://docs.microsoft.com/en-us/azure/devops/pipelines/process/phases?view=azure-devops&tabs=yaml  
+  *You can copy the following template*
+```yaml
+
+trigger:
+- master
+
+jobs: 
+  - job: build_containers
+    pool:
+      vmImage: 'Ubuntu-16.04'
+    steps:
+    #Build and publish steps go here
+  - job: integration_tests
+    pool:
+      vmImage: 'Ubuntu-16.04'
+    dependsOn: 
+      - build_containers
+    steps:
+    # Download steps go here
+```
