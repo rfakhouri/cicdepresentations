@@ -11,7 +11,7 @@ In this lab we are going to create the infrastructure that we are going to be de
    - Resource Group Name 
    - Location
    - VM Size
-0. Use the VM to provision some infrastructure in Azure.
+0. Use the Script to provision some infrastructure in Azure.
 
 
 *N.B. The following guide will be useful in this task: https://www.terraform.io/docs/modules/index.html*
