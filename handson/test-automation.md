@@ -54,13 +54,17 @@ This will run the cypress tests in headless mode, it disables video, and disable
 
 ## Part 2 Unit Tests
 
-1. Write a unit test that `TODO: Does Something`
-0. ?????
+0. Add Nock to your project as a dev tool 
+    - `npm i --save-dev nock` 
+0. Use nock and jest to write an automated unit test for the mounted method in the `home.vue` file. The test should do the following: 
+   1. Setup the nock mock
+   2. run the mounted method
+   3. verify that the mocked tasks get added to the tasks property
 0. Add unit test to vue-client docker build by adding the following line in the build stage after `npm ci` is run:
   `RUN npm run test:unit`
 
 ## Part 3 Finish up
 
-1. Commit your changes
-2. Push your branch up to GitHub
-3. Open a Pull Request to kick off the build
+0. Commit your changes
+0. Push your branch up to GitHub
+0. Open a Pull Request to kick off the build
