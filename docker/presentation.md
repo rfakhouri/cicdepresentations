@@ -28,7 +28,6 @@ VM's are like Houses they each use City Infrastructure but manage it themselves.
 
 Containers are like Apartments, they don't manage their own infrastructure but let the Apartment (Docker Daemon) manage it for them .
 
-
 ------
 
 Listen I know it's not perfect but it's the best I got right now. 
@@ -65,7 +64,7 @@ Okay, now that I have that awkward attempt to explain this out of the way let's 
 
 ---
 
-The basics. 
+The Basics
 
 ---
 
@@ -100,4 +99,83 @@ Note: hub.docker.com is the most common public registry, Quay.io set managed key
 Private Regsitries
 
 Note: you can host your own or use a managed registry through your CSP.
+
+---
+
+Layers
+
+Note: Docker Images are built up of layers each layer corresponds to a line in a docker file.
+
+---
+
+Most Common Keywords 
+
+------
+
+
+`FROM` 
+
+Note: First line in every file delineates the base layer, multi-stage docker containers can have multiple.
+
+
+------
+
+`COPY` 
+
+Note: Copy from host os or previous stage to container/current stage
+
+------
+
+`RUN` 
+
+Note: Run a shell command in the container 
+
+------
+
+`ENV`
+
+Note: Set an environment variable in the container 
+
+
+------
+
+`EXPOSE`
+
+Note: Expose an internal container port to the external os
+
+------
+
+`CMD`
+
+Note: The command to be run when the container is run
+
+------
+
+`ADD`
+
+Note: Download a file from the internet or copy from the host os into the container, invalidates cache afterwards
+
+------
+
+`ENTRYPOINT`
+
+Note: lets you run a container as a single command 
+
+---
+
+Okay that's pretty much all the commands, there are a few others you can find the reference at: 
+
+https://docs.docker.com/engine/reference/builder/
+
+---
+
+Docker Compose 
+
+------
+
+A way to run multiple docker containers together, great for hosting locally if you don't have something such as MiniKube or a local kubernetes instance. 
+
+------
+
+I'm not going to go into detail but with this one. 
 
