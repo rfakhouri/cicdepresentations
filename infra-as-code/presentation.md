@@ -35,15 +35,44 @@ This is different from how you are used to writing code where you tell the compu
 
 # It looks like this:
 
-```
+```json
 resource "azurerm_resource_group" "rg" {
-name     = "resource-group-name"
-location = "CanadaEast"
-tags {
-  environment = "TF sandbox"
-}
+  name     = "resource-group-name"
+  location = "CanadaEast"
+  tags {
+    environment = "TF sandbox"
+  }
 }
 ```
+
+---
+
+Wait a sec why don't we just use the GUI? 
+
+------
+
+Leverage Collaboration tools built for coding 
+
+
+------
+
+Code Reviews
+
+------
+
+Built in Auditing
+
+
+------
+
+Leverage tools to
+
+- ensure Code Consistency
+- check for Errors
+
+------
+
+IMHO We should treat everything we can as Code
 
 ---
 
@@ -54,31 +83,18 @@ tags {
 
 ---
 
-# First Steps
-
-------
-
-In a directory run 
-
-```
-terraform init
-```
-
-- Download and install Providers
-- Download Modules
-
----
-
-```
 # Apply vs Plan
 
 ---
 
 # Common Pitfalls
 
+Note: storing state locally
+
 ---
 
 # Input Variables
+
 - CLI 
 - File
 - Environment
@@ -95,6 +111,14 @@ terraform init
 
 # Dependencies
 
+
+
 ---
 
 # Modules
+
+Note
+
+---
+
+https://www.youtube.com/watch?v=Y42hgiSvXfE

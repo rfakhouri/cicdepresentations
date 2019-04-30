@@ -5,6 +5,7 @@
 0. [Docker](docker/index.html)
 0. [Introduction to Azure DevOps](intro-to-azure-dev-ops/index.html)  
 0. [Managing Secrets](managing-secrets/index.html)  
+0. [Practical Steps for Securing your container deployment By Liz Rice _(Youtube Video)_](https://www.youtube.com/watch?v=rYfDwG-bwLI)
 0. [Test Automation](test-automation/index.html)  
 0. [Cypress.io](Cypress/index.html)
 0. [Infrastructure as Code Presentation](infra-as-code/index.html)  

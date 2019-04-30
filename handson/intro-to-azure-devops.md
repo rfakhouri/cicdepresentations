@@ -1,12 +1,14 @@
 # Intro to Azure DevOps Pipeline Hands On Lab.
  In this lab you will create a project in GitHub connect it to an Azure Pipeline this pipeline and repo will be used in subsequent labs.
  
-1. Create an account with Azure DevOps, you should be able to use the account you created for the 2 day Azure course. 
+0. Create an account with Azure DevOps, you should be able to use the account you created for the 2 day Azure course. 
    - https://devops.azure.com 
-2. Fork the following repo to your personal GitHub account: <<TODO: Add initial repo here>>  
+0. Authorize Azure DevOps on your GitHub account, follow the instructions for following a GitHub App
+    - https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/github?view=azure-devops#authorize-access-to-your-repositories
+1. Fork the following repo to your personal GitHub account: https://github.com/csps-efpc-daan-students-etudiants/intro-to-azure-devops-handson 
    Instructions can be found here: https://help.github.com/en/articles/fork-a-repo 
-3. Create a azure-pipeline.yml file that runs `docker-compose build` 
-4. Save the following docker images built from the previous command in the `publish` folder (_Hint you'll have to create that folder first_).
+2. Create a azure-pipeline.yml file that runs `docker-compose build` 
+3. Save the following docker images built from the previous command in the `publish` folder (_Hint you'll have to create that folder first_).
     - `express-api:latest` 
     - `vue-client:latest`   
 Instructions can be found here: https://docs.docker.com/engine/reference/commandline/save/
