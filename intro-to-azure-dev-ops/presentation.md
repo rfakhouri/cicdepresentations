@@ -53,16 +53,14 @@ Note: I recommend you use YAML files over their drag and drop GUI, in fact I bel
 
 Pipelines
 
+---
 
-------
+Agents 
 
-If you have a single stage, you can omit stages and directly specify jobs.
-
-------
-
-If you have a single stage and a single job, you can omit those keywords and directly specify steps.
+Note: These are the things your builds run in, basically containers, you can have macos, windows, linux, and you can use ones provided for free from Azure DevOps or connect it to your cloud. you get an unlimited amount of this for free for open source projects 
 
 ---
+
 
 Stages  
 
@@ -74,10 +72,18 @@ Jobs
 
 Note: A job is a collection of steps to be run by an agent or, in some cases, on the server. Jobs can be run conditionally, and they may depend on earlier jobs.
 
+---
+
+If you have a single stage, you can omit stages and directly specify jobs.
 
 ------
 
-Container Reference  
+If you have a single stage and a single job, you can omit those keywords and directly specify steps.
+
+
+------
+
+Job: Container Reference  
 
 Docker hub
 
@@ -98,7 +104,7 @@ container:
 
 ------
 
-Strategies
+Job: Strategies
 
 `matrix` and `parallel` are mutually-exclusive strategies for duplicating a job.
 
@@ -168,6 +174,9 @@ Note: Templates may themselves include other templates. Azure Pipelines supports
 ---
 
 Resources
+ 
+Note: Anything used by a pipeline that lives outside the pipeline itself, secure files, variable groups, service connections, agent pools, other repos
+
 
 ------
 
@@ -187,6 +196,12 @@ Note: run alongside a job to provide various dependencies such as databases.
 Repository Resource  
 
 Note: If your pipeline has templates in another repository, you must let the system know about that repository. The repository resource lets you specify an external repository.
+
+------
+
+Service Connection
+
+Note: connection to an outside thing i.e. Github, TFS, svn, ssh, python package, npm nuget, jenkins, docker registry, chef server....
 
 ------
 
