@@ -19,13 +19,13 @@ vue-client/npm run test:e2e
 
 ---
 
-
-1. Add the Cypress-Axe Dev dependency to the project  
+0. Add the Cypress Vue Cli dev dependency to the project using `npm i --save-dev @vue/cli-plugin-e2e-cypress`
+0. Add the Cypress-Axe Dev dependency to the project  
    Use the instructions found here: https://www.npmjs.com/package/cypress-axe  
   *You will have to restart your cypress instance after this step*
-2. Write a test that adds a task and validates that it gets added
-3. Write a test that toggles the task you added in the previous step and validates that it gets toggled.
-4. Add the following to the `scripts` section of the `vue-client/package.json` file.  
+0. Write a test that adds a task and validates that it gets added
+0. Write a test that toggles the task you added in the previous step and validates that it gets toggled.
+0. Add the following to the `scripts` section of the `vue-client/package.json` file.  
     `"test:e2e-cli": "vue-cli-service test:e2e --headless --url http://localhost:8080 --config video=false,chromeWebSecurity=false",`  
 This will run the cypress tests in headless mode, it disables video, and disables the Cross-Origin-Resource-Sharing Check.  
 0. Add the following Job to you azure-pipelines.yml file

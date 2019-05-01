@@ -85,6 +85,8 @@ IMHO We should treat everything we can as Code
 
 # Apply vs Plan
 
+Note: plan lets you review the changes you are making to your infrastructure. 
+
 ---
 
 # Common Pitfalls
