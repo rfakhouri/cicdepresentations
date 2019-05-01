@@ -13,6 +13,7 @@ In this hands on activity we are going to integrate Snyk vulnerability scanning 
 0. Run the test.
 0. Ignore the issue that are found by adding them to your build script
     - https://snyk.io/docs/cli-ignore/
+    - _please note at the moment there is a bit of a bug in this hands on so we'll just remove the test for now. :(_
 0. Run your test again
 
 ```
