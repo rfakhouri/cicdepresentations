@@ -32,7 +32,7 @@ Note: Question for audience
 
 Who do I think should write them?  
 
-Developers
+Developers and (Product) Development Team
 
 ---
 
@@ -110,3 +110,81 @@ Are you developing an Open Source Library or Framework?
 If the answer to that question is yes then you absolutely need them. 
 
 Note: A stable contract is very important, you don't want to break things for your users.
+
+---
+
+Test Structure
+
+------
+
+Tests both unit and end to end follow the same structure: 
+
+0. Setup test
+0. Run test
+0. Verify test
+
+---
+
+Tests require testable code
+
+------
+
+Nicely Unit Testable Code
+
+-------
+
+Inject Dependencies
+
+------
+
+Bad Tightly Coupled Code :(
+
+```js
+function Foo() { 
+  var dbConnection;
+  var results = dbConnection.doSomething();
+  
+  /*
+    Lots of processing stuff here
+  */
+ 
+ return processedResults;
+}
+
+```
+
+------
+
+Nice Loosely Coupled Code :)
+
+```js
+function Foo(dbConnection) { 
+  var results = dbConnection.doSomething();
+  
+  /*
+    Lots of processing stuff here
+  */
+ 
+ return processedResults;
+}
+
+```
+------
+
+Reduce Side Effects
+
+Note: Functions should do one thing and preferably it should 
+
+---
+
+Nicely Testable Web Apps
+
+------
+
+ID's
+
+Just throw these on everything.
+
+---
+
+Most Importantly write your own tests, you won't make your stuff testable if you don't feel the pain.
