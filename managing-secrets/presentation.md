@@ -105,6 +105,29 @@ https://github.com/anshumanbh/git-all-secrets
 
 ---
 
+So how should you handle secrets and where should they be stored? 
+
+------
+
+Environment Variables
+
+------
+
+Vaults
+
+- Azure KeyVault
+- HashiCorp Vault
+- Google Cloud KMS
+- AWS KMS
+
+------
+
+Encrypted files that get decrypted at build times. 
+
+Note: Don't store the keys in your repo, store them in a vault, or as part of the secret management built into your CI Tool
+
+---
+
 And hey accidents happen, we are all human.
 
 ------
@@ -119,9 +142,7 @@ Here's a sample procedure.
 
 0. Remove Secret from repo  
     - Instructions for removing secrets from a Git https://help.github.com/en/articles/removing-sensitive-data-from-a-repository
-0. Revoke secret  
-    - Generate New Password  
-    - Revoke API Keys  
+0. Revoke the secret and generate a new one
 0. Evaluate Potential Impact look to your Privacy Impact Assessment (PIA) to help.  
 0. Notify your Privacy Office or whoever you contact when a Privacy Breach occurs
 
