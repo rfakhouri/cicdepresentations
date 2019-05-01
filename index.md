@@ -17,6 +17,7 @@
 0. [Docker-Bench](handson/docker-bench.md)
 0. [Intro to Azure DevOps](handson/intro-to-azure-devops.md)
 0. [Managing Secrets](handson/managing-secrets.md)
+0. [Scanning Vulnerabilites with Snyk](handson/snyk.md)
 0. [Test Automation](handson/test-automation.md)
 0. [Infrastructure as Code](handson/infrastructure-as-code.md)
 0. [Deployment](handson/deployment.md)

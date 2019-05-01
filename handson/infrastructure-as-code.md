@@ -3,7 +3,8 @@
 In this lab we are going to create the infrastructure that we are going to be deploying our application to
 
 
-1. Create a new folder 
+0. Login using az login _Terraform uses your login credentials to create infrastructure_
+0. Create a new folder 
 0. Use the following instructions to create a Terraform file Virtual Machine  
     https://www.terraform.io/docs/providers/azurerm/r/virtual_machine.html
 0. Ensure the Infrastructure is located in Canada and tag it with your name
