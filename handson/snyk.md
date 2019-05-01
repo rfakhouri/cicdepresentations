@@ -11,8 +11,9 @@ In this hands on activity we are going to integrate Snyk vulnerability scanning 
 0. Install snyk on the pipeline.
 0. Run `snyk test` in `vue-client` and `express-api`. 
 0. Run the test.
-
-
+0. Ignore the issue that are found by adding them to your build script
+    - https://snyk.io/docs/cli-ignore/
+0. Run your test again
 
 ```
   - job: scan_secrets
