@@ -6,7 +6,7 @@ What is a container?
 
 ------
 
-A container is simply a way to bundle together state change on a computer, and a way to isolate resources on a computer. 
+A container is simply a way to bundle together state change on a computer, and constrain the resources that an application consumes.
 
 ------
 
@@ -18,7 +18,7 @@ Analogy Time
 
 ------
 
-Computer/Server is like a City, it provides infrastructure (Water/Sewer/Electricity) for everyone. 
+Computer/Server is like a City, it provides and manages infrastructure (Water/Sewer/Electricity).
 
 ------
 
@@ -26,7 +26,7 @@ VM's are like Houses they each use City Infrastructure but manage it themselves.
 
 ------
 
-Containers are like Apartments, they don't manage their own infrastructure but let the Apartment (Docker Daemon) manage it for them .
+Containers are like Apartments, they don't manage their own infrastructure but let the Apartment Building (Docker Daemon) manage it for them .
 
 ------
 
@@ -39,6 +39,12 @@ And I'm not the first person to come up with this analogy.
 - https://blog.docker.com/2016/03/containers-are-not-vms/
 
 I'm sure we can find others, but I'm not going to. 
+
+------
+
+VMWare Lightboard: What is a Container
+
+https://www.youtube.com/watch?v=EnJ7qX9fkcU
 
 ---
 
@@ -53,14 +59,45 @@ Benefits of containers over VMs
 
 Cons of Containers over VMs
 
-- Shared Host OS Kernel, you break into it one container you probably have access to everything. 
+- Shared Host OS Kernel, you break out of one container you probably have access to everything. 
 
 Note: Does this mean we shouldn't use Containers? Nope, just means you shouldn't act as if you are secure just because you are using them.
 
 
 ---
 
+VMWare Lightboard: VM and Containers a Practical Comparison
+
+https://www.youtube.com/watch?v=L1ie8negCjc
+
+
+---
+
+
 Okay, now that I have that awkward attempt to explain this out of the way let's get on with it. 
+
+
+---
+
+Wait a second...
+
+You didn't explain what Docker is. 
+
+------
+
+So Docker is one type of container technology, the most popular one at the moment. 
+
+------
+
+It provides a way to define a container in a `Dockerfile`
+
+------
+
+It provides a way to build off of an leverage other containers `Docker Registry`
+
+------
+
+I'm sure there are other things I'm missing but for practical purposes it doesn't really matter, or at least I don't care about it. 
 
 ---
 
@@ -70,7 +107,7 @@ The Basics
 
 Dockerfile  
 
-Note: A file that has the instructions for building the docker file
+Note: A file that has the instructions for building the docker image
 
 ---
 
@@ -175,7 +212,4 @@ Docker Compose
 
 A way to run multiple docker containers together, great for hosting locally if you don't have something such as MiniKube or a local kubernetes instance. 
 
-------
-
-I'm not going to go into detail but with this one. 
-
+Note: Walk through contents of a docker-compose file.
