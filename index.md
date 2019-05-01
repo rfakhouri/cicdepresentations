@@ -14,6 +14,7 @@
 ## Hands On
 
 0. [Docker](handson/docker.md)
+0. [Docker-Bench](handson/docker-bench.md)
 0. [Intro to Azure DevOps](handson/intro-to-azure-devops.md)
 0. [Managing Secrets](handson/managing-secrets.md)
 0. [Test Automation](handson/test-automation.md)
