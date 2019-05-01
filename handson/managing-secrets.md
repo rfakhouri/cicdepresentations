@@ -21,15 +21,3 @@ In this lab you will see how easy it is to find secrets in a project in GitHub a
     - `pip install detect-secrets`
 0. Scan the project during the build pipeline.
 0. Review the results on your Pull Request and tune the scan to ignore any false-positives.
-0. Try to commit a file with a secret to your repo and perform a Pull Request
-
-
-_You can use the following fragment for your new job_
-```yml
-
-  - job: Scan Secrets
-    pool:
-      vmImage: 'Ubuntu-16.04'
-    steps:
-    #Install and scan steps go here
-```  
