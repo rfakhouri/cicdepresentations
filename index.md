@@ -21,5 +21,4 @@
 0. [Test Automation](handson/test-automation.md)
 0. [Infrastructure as Code](handson/infrastructure-as-code.md)
 0. [Deployment](handson/deployment.md)
-
-
+0. [Cypress Handson](handson/cypress.md)
