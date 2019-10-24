@@ -15,6 +15,8 @@ Syntax highlighted code block
 ## Header 2
 ### Header 3
 
+[Build [![Build Status](https://dev.azure.com/rfakhouri/rfakhouri/_apis/build/status/rfakhouri.cicdepresentations?branchName=master)](https://dev.azure.com/rfakhouri/rfakhouri/_build/latest?definitionId=8&branchName=master)
+
 - Bulleted
 - List
 
